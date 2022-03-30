@@ -1,6 +1,6 @@
 package com.generation.blogmobile.entity;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,7 +35,7 @@ public class Postagem {
 	private String imagem;
 	
 	@UpdateTimestamp
-	private LocalDateTime dataHora;
+	private LocalDate dataHora;
 	
 	@NotBlank(message = "Valor não pode ser em branco ou nulo")
 	@Size(max = 90, message = "Quantidade de caracteres permitido é 1000.")
@@ -77,11 +77,11 @@ public class Postagem {
 		this.imagem = imagem;
 	}
 
-	public LocalDateTime getDataHora() {
+	public LocalDate getDataHora() {
 		return dataHora;
 	}
 
-	public void setDataHora(LocalDateTime dataHora) {
+	public void setDataHora(LocalDate dataHora) {
 		this.dataHora = dataHora;
 	}
 
